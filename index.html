@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spring Framework — Unit V Interactive Study Documentation</title>
+  <meta name="description" content="Interactive, simple and easy to understand documentation of Spring Framework Unit V Study Notes: Theory, Diagrams, and Programs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-dark">
+  <!-- Top Application Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="brand-badge">UNIT V</div>
+      <div class="header-title-group">
+        <h1 class="header-title">Spring Framework</h1>
+        <span class="header-subtitle">Complete Theory + Diagrams + Programs &bull; Duration: 09 Hours</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" id="point-search" placeholder="Search points (e.g. DispatcherServlet, Bean, DI)..." aria-label="Search study points">
+        <button id="clear-search" class="clear-search-btn" title="Clear search" aria-label="Clear search">&times;</button>
+      </div>
+      <div class="view-mode-toggle" title="Toggle Layout Mode">
+        <button id="mode-split" class="mode-btn active" title="Side-by-Side Points & Explanation">Split View</button>
+        <button id="mode-focus" class="mode-btn" title="Point Focus Mode">Focus Mode</button>
+      </div>
+      <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+        <svg class="theme-icon sun" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        <svg class="theme-icon moon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+      <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Points Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Progress Ribbon -->
+  <div class="reading-progress-bar" id="reading-progress" style="width: 0%;"></div>
+
+  <!-- Main Split-Screen Container -->
+  <div class="workspace-container">
+    
+    <!-- LEFT SIDE: Points Navigator & Catalog -->
+    <aside class="points-panel" id="points-sidebar">
+      <div class="points-panel-header">
+        <div class="panel-tag">
+          <span class="pulse-dot"></span>
+          <span>SYLLABUS POINTS (6 CHAPTERS)</span>
+        </div>
+        <div class="points-stats" id="points-count-badge">26 Points</div>
+      </div>
+
+      <nav class="points-list" id="points-nav" aria-label="Study Notes Points">
+        
+        <!-- Chapter 1 -->
+        <div class="chapter-group" data-chapter="1">
+          <div class="chapter-header">
+            <span class="chapter-num">CH 1</span>
+            <span class="chapter-name">Introduction & Architecture</span>
+          </div>
+          <div class="chapter-items">
+            <a href="#point-1-1" class="point-item active" data-point="1-1">
+              <span class="point-index">1.1</span>
+              <div class="point-info">
+                <span class="point-title">What is Spring Framework?</span>
+                <span class="point-desc">Definition & Enterprise plumbing role</span>
+              </div>
+            </a>
+            <a href="#point-1-2" class="point-item" data-point="1-2">
+              <span class="point-index">1.2</span>
+              <div class="point-info">
+                <span class="point-title">Why do we need Spring?</span>
+                <span class="point-desc">J2EE boilerplate vs Spring solutions</span>
+              </div>
+            </a>
+            <a href="#point-1-3" class="point-item" data-point="1-3">
+              <span class="point-index">1.3</span>
+              <div class="point-info">
+                <span class="point-title">Features of Spring</span>
+                <span class="point-desc">6 core features in simple words</span>
+              </div>
+            </a>
+            <a href="#point-1-4" class="point-item" data-point="1-4">
+              <span class="point-index">1.4</span>
+              <div class="point-info">
+                <span class="point-title">Spring Architecture (Modules)</span>
+                <span class="point-desc">Layered architecture & Core Container</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="chapter-group" data-chapter="2">
+          <div class="chapter-header">
+            <span class="chapter-num">CH 2</span>
+            <span class="chapter-name">Dependency Injection & IoC</span>
+          </div>
+          <div class="chapter-items">
+            <a href="#point-2-1" class="point-item" data-point="2-1">
+              <span class="point-index">2.1</span>
+              <div class="point-info">
+                <span class="point-title">Inversion of Control (IoC)</span>
+                <span class="point-desc">Design principle & Container role</span>
+              </div>
+            </a>
+            <a href="#point-2-2" class="point-item" data-point="2-2">
+              <span class="point-index">2.2</span>
+              <div class="point-info">
+                <span class="point-title">Dependency Injection (DI)</span>
+                <span class="point-desc">Technique to implement IoC</span>
+              </div>
+            </a>
+            <a href="#point-2-3" class="point-item" data-point="2-3">
+              <span class="point-index">2.3</span>
+              <div class="point-info">
+                <span class="point-title">Block Diagram: DI vs Non-DI</span>
+                <span class="point-desc">Tight coupling vs Loose coupling</span>
+              </div>
+            </a>
+            <a href="#point-2-4" class="point-item" data-point="2-4">
+              <span class="point-index">2.4</span>
+              <div class="point-info">
+                <span class="point-title">Types of DI (Constructor & Setter)</span>
+                <span class="point-desc">Comparison & when to use which</span>
+              </div>
+            </a>
+            <a href="#point-2-5" class="point-item" data-point="2-5">
+              <span class="point-index">2.5</span>
+              <div class="point-info">
+                <span class="point-title">Autowiring Feature</span>
+                <span class="point-desc">Automatic wiring by type or name</span>
+              </div>
+            </a>
+            <a href="#point-2-6" class="point-item" data-point="2-6">
+              <span class="point-index">2.6</span>
+              <div class="point-info">
+                <span class="point-title">Programs: Setter & Constructor DI</span>
+                <span class="point-desc">Car, Engine, XML & Main application</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="chapter-group" data-chapter="3">
+          <div class="chapter-header">
+            <span class="chapter-num">CH 3</span>
+            <span class="chapter-name">Spring Container & Bean Life Cycle</span>
+          </div>
+          <div class="chapter-items">
+            <a href="#point-3-1" class="point-item" data-point="3-1">
+              <span class="point-index">3.1</span>
+              <div class="point-info">
+                <span class="point-title">What is the Spring Container?</span>
+                <span class="point-desc">Container role & definition of Bean</span>
+              </div>
+            </a>
+            <a href="#point-3-2" class="point-item" data-point="3-2">
+              <span class="point-index">3.2</span>
+              <div class="point-info">
+                <span class="point-title">BeanFactory vs ApplicationContext</span>
+                <span class="point-desc">Lazy loading vs Eager enterprise container</span>
+              </div>
+            </a>
+            <a href="#point-3-3" class="point-item" data-point="3-3">
+              <span class="point-index">3.3</span>
+              <div class="point-info">
+                <span class="point-title">Spring Bean Life Cycle (9 Steps)</span>
+                <span class="point-desc">Instantiation to Container Shutdown</span>
+              </div>
+            </a>
+            <a href="#point-3-4" class="point-item" data-point="3-4">
+              <span class="point-index">3.4</span>
+              <div class="point-info">
+                <span class="point-title">Simplified Life Cycle (Exam)</span>
+                <span class="point-desc">Instantiate &rarr; Populate &rarr; Init &rarr; Use &rarr; Destroy</span>
+              </div>
+            </a>
+            <a href="#point-3-5" class="point-item" data-point="3-5">
+              <span class="point-index">3.5</span>
+              <div class="point-info">
+                <span class="point-title">Program: Custom init() & destroy()</span>
+                <span class="point-desc">HelloBean code, XML & Lifecycle output</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="chapter-group" data-chapter="4">
+          <div class="chapter-header">
+            <span class="chapter-num">CH 4</span>
+            <span class="chapter-name">XML vs Annotation Configuration</span>
+          </div>
+          <div class="chapter-items">
+            <a href="#point-4-1" class="point-item" data-point="4-1">
+              <span class="point-index">4.1</span>
+              <div class="point-info">
+                <span class="point-title">XML-Based Configuration</span>
+                <span class="point-desc">Bean declaration & Student program</span>
+              </div>
+            </a>
+            <a href="#point-4-2" class="point-item" data-point="4-2">
+              <span class="point-index">4.2</span>
+              <div class="point-info">
+                <span class="point-title">Annotation Configuration & Tags</span>
+                <span class="point-desc">@Component, @Autowired, @Configuration</span>
+              </div>
+            </a>
+            <a href="#point-4-3" class="point-item" data-point="4-3">
+              <span class="point-index">4.3</span>
+              <div class="point-info">
+                <span class="point-title">Program: Annotation Based App</span>
+                <span class="point-desc">AppConfig, Engine, Car & Main</span>
+              </div>
+            </a>
+            <a href="#point-4-4" class="point-item" data-point="4-4">
+              <span class="point-index">4.4</span>
+              <div class="point-info">
+                <span class="point-title">XML vs Annotation Comparison</span>
+                <span class="point-desc">Location, readability, flexibility comparison</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Chapter 5 -->
+        <div class="chapter-group" data-chapter="5">
+          <div class="chapter-header">
+            <span class="chapter-num">CH 5</span>
+            <span class="chapter-name">Spring MVC & DispatcherServlet</span>
+          </div>
+          <div class="chapter-items">
+            <a href="#point-5-1" class="point-item" data-point="5-1">
+              <span class="point-index">5.1</span>
+              <div class="point-info">
+                <span class="point-title">What is Spring MVC?</span>
+                <span class="point-desc">Model, View, Controller roles</span>
+              </div>
+            </a>
+            <a href="#point-5-2" class="point-item" data-point="5-2">
+              <span class="point-index">5.2</span>
+              <div class="point-info">
+                <span class="point-title">DispatcherServlet (Front Controller)</span>
+                <span class="point-desc">Heart of MVC & centralized routing</span>
+              </div>
+            </a>
+            <a href="#point-5-3" class="point-item" data-point="5-3">
+              <span class="point-index">5.3</span>
+              <div class="point-info">
+                <span class="point-title">MVC Request Flow Diagram (8 Steps)</span>
+                <span class="point-desc">Interactive step-by-step request flow</span>
+              </div>
+            </a>
+            <a href="#point-5-4" class="point-item" data-point="5-4">
+              <span class="point-index">5.4</span>
+              <div class="point-info">
+                <span class="point-title">Program: Spring MVC App</span>
+                <span class="point-desc">HomeController, web.xml & welcome.jsp</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Chapter 6 -->
+        <div class="chapter-group" data-chapter="6">
+          <div class="chapter-header">
+            <span class="chapter-num">CH 6</span>
+            <span class="chapter-name">Database: Spring JDBC & Hibernate</span>
+          </div>
+          <div class="chapter-items">
+            <a href="#point-6-1" class="point-item" data-point="6-1">
+              <span class="point-index">6.1</span>
+              <div class="point-info">
+                <span class="point-title">Why Spring JDBC? (JdbcTemplate)</span>
+                <span class="point-desc">Boilerplate removal & Flow Diagram</span>
+              </div>
+            </a>
+            <a href="#point-6-2" class="point-item" data-point="6-2">
+              <span class="point-index">6.2</span>
+              <div class="point-info">
+                <span class="point-title">Program: Spring JDBC with DAO</span>
+                <span class="point-desc">StudentDao, DataSource XML & Main</span>
+              </div>
+            </a>
+            <a href="#point-6-3" class="point-item" data-point="6-3">
+              <span class="point-index">6.3</span>
+              <div class="point-info">
+                <span class="point-title">Spring + Hibernate Integration</span>
+                <span class="point-desc">ORM definition & SessionFactory flow</span>
+              </div>
+            </a>
+            <a href="#point-6-4" class="point-item" data-point="6-4">
+              <span class="point-index">6.4</span>
+              <div class="point-info">
+                <span class="point-title">Program: Hibernate Entity & DAO</span>
+                <span class="point-desc">@Entity, SessionFactory bean & saveStudent</span>
+              </div>
+            </a>
+            <a href="#point-6-5" class="point-item" data-point="6-5">
+              <span class="point-index">6.5</span>
+              <div class="point-info">
+                <span class="point-title">Spring JDBC vs Hibernate</span>
+                <span class="point-desc">Comparison table & Exam tips</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Chapter 7: Quick Revision -->
+        <div class="chapter-group" data-chapter="7">
+          <div class="chapter-header highlight-header">
+            <span class="chapter-num">REV</span>
+            <span class="chapter-name">Quick Revision (One-Liners)</span>
+          </div>
+          <div class="chapter-items">
+            <a href="#point-quick-revision" class="point-item" data-point="quick-revision">
+              <span class="point-index">&#x2713;</span>
+              <div class="point-info">
+                <span class="point-title">One-Line Answers to Remember</span>
+                <span class="point-desc">8 Core Exam Definitions</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </nav>
+    </aside>
+
+    <!-- RIGHT SIDE: Rich Explanations Viewport -->
+    <main class="explanation-viewport" id="explanation-viewport">
+      
+      <!-- CHAPTER 1 SECTION -->
+      <section class="chapter-section" id="chapter-1">
+        <div class="section-title-badge">
+          <span class="badge-tag">CHAPTER 1</span>
+          <h2>Introduction to Spring Framework and its Architecture</h2>
+        </div>
+
+        <!-- Point 1.1 -->
+        <article class="explanation-card" id="point-1-1">
+          <div class="card-header">
+            <div class="card-point-pill">Point 1.1</div>
+            <h3>What is Spring Framework?</h3>
+          </div>
+          <div class="card-body">
+            <div class="callout callout-definition">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4D6;</span> DEFINITION
+              </div>
+              <p>
+                <strong>Spring</strong> is a lightweight, open-source Java framework used to build enterprise-level applications easily. It handles the <em>"plumbing"</em> work of an application &mdash; like creating objects and connecting them &mdash; so the developer can focus only on writing business logic.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Point 1.2 -->
+        <article class="explanation-card" id="point-1-2">
+          <div class="card-header">
+            <div class="card-point-pill">Point 1.2</div>
+            <h3>Why do we need Spring?</h3>
+          </div>
+          <div class="card-body">
+            <p class="context-lead">
+              Before Spring, <strong>Java EE (J2EE)</strong> applications required a lot of boilerplate code (repetitive setup code) and tightly-coupled classes, which made testing and maintenance hard. Spring solves this by providing:
+            </p>
+            <ul class="feature-bullets">
+              <li>
+                <div class="bullet-marker">&#x2714;</div>
+                <div class="bullet-content">
+                  <strong>Loose coupling between classes</strong> using Dependency Injection.
+                </div>
+              </li>
+              <li>
+                <div class="bullet-marker">&#x2714;</div>
+                <div class="bullet-content">
+                  <strong>Ready-made modules</strong> for database access, transactions, web MVC, security, etc.
+                </div>
+              </li>
+              <li>
+                <div class="bullet-marker">&#x2714;</div>
+                <div class="bullet-content">
+                  <strong>POJO-based development</strong> &mdash; you can build enterprise applications using simple Plain Old Java Objects instead of heavy, complex classes.
+                </div>
+              </li>
+              <li>
+                <div class="bullet-marker">&#x2714;</div>
+                <div class="bullet-content">
+                  <strong>Integration support</strong> with other frameworks like Hibernate, Struts, JSF, etc.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Point 1.3 -->
+        <article class="explanation-card" id="point-1-3">
+          <div class="card-header">
+            <div class="card-point-pill">Point 1.3</div>
+            <h3>Features of Spring Framework</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th style="width: 32%;">Feature</th>
+                    <th>Meaning in Simple Words</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="pill-badge pill-green">Lightweight</span></td>
+                    <td>Minimal overhead; uses POJOs instead of heavy EJB-style objects.</td>
+                  </tr>
+                  <tr>
+                    <td><span class="pill-badge pill-blue">IoC (Inversion of Control)</span></td>
+                    <td>Spring creates and manages objects for you instead of you creating them with <code>new</code>.</td>
+                  </tr>
+                  <tr>
+                    <td><span class="pill-badge pill-purple">Aspect-Oriented Programming (AOP)</span></td>
+                    <td>Common tasks like logging or security can be added separately without touching business code.</td>
+                  </tr>
+                  <tr>
+                    <td><span class="pill-badge pill-amber">MVC Framework</span></td>
+                    <td>Built-in support to build web applications using Model-View-Controller pattern.</td>
+                  </tr>
+                  <tr>
+                    <td><span class="pill-badge pill-teal">Transaction Management</span></td>
+                    <td>Simplifies handling database transactions (commit/rollback).</td>
+                  </tr>
+                  <tr>
+                    <td><span class="pill-badge pill-pink">Integration Friendly</span></td>
+                    <td>Works smoothly with JDBC, Hibernate, JPA, JMS and other technologies.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <!-- Point 1.4 -->
+        <article class="explanation-card" id="point-1-4">
+          <div class="card-header">
+            <div class="card-point-pill">Point 1.4</div>
+            <h3>Spring Framework Architecture (Modules)</h3>
+          </div>
+          <div class="card-body">
+            <p class="context-lead">
+              Spring is not a single big library &mdash; it is divided into many small modules grouped into layers. A developer can pick only the modules needed for the project.
+            </p>
+
+            <!-- Interactive Architecture Stack Diagram -->
+            <div class="diagram-container">
+              <div class="diagram-title">BLOCK DIAGRAM &mdash; SPRING FRAMEWORK LAYERED ARCHITECTURE</div>
+              <p class="diagram-instruction">Layered stack representation (Core Container forms the base):</p>
+              
+              <div class="arch-stack">
+                <div class="arch-layer layer-test" data-layer="test">
+                  <div class="layer-header">
+                    <span class="layer-title">Test Module</span>
+                    <span class="layer-sub">(JUnit / TestNG Integration)</span>
+                  </div>
+                </div>
+                <div class="arch-arrow">&darr;</div>
+
+                <div class="arch-layer layer-web" data-layer="web">
+                  <div class="layer-header">
+                    <span class="layer-title">Spring MVC / Web Module</span>
+                    <span class="layer-sub">(Web, Servlet, WebSocket, Portlet)</span>
+                  </div>
+                </div>
+                <div class="arch-arrow">&darr;</div>
+
+                <div class="arch-layer layer-aop" data-layer="aop">
+                  <div class="layer-header">
+                    <span class="layer-title">AOP & Instrumentation</span>
+                    <span class="layer-sub">(Aspects, AOP, Instrumentation)</span>
+                  </div>
+                </div>
+                <div class="arch-arrow">&darr;</div>
+
+                <div class="arch-layer layer-data" data-layer="data">
+                  <div class="layer-header">
+                    <span class="layer-title">Data Access / Integration Layer</span>
+                    <span class="layer-sub">(JDBC, ORM, OXM, JMS, Transactions)</span>
+                  </div>
+                </div>
+                <div class="arch-arrow">&darr;</div>
+
+                <div class="arch-layer layer-core active-highlight" data-layer="core">
+                  <div class="layer-header">
+                    <span class="layer-title">Core Container (Foundation Layer)</span>
+                    <span class="layer-sub">(Core, Beans, Context, SpEL)</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="arch-caption">
+                The <strong>Core Container is the foundation</strong> &mdash; it manages beans and dependencies. Every other module is built on top of it.
+              </div>
+            </div>
+
+            <!-- Core Container Details -->
+            <div class="sub-topic-box">
+              <h4 class="sub-heading">Core Container &mdash; the heart of Spring</h4>
+              <ul class="feature-bullets">
+                <li>
+                  <div class="bullet-marker">&bull;</div>
+                  <div class="bullet-content">
+                    <strong>Core &amp; Beans:</strong> Provides the fundamental IoC and Dependency Injection features.
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-marker">&bull;</div>
+                  <div class="bullet-content">
+                    <strong>Context:</strong> Adds enterprise-level services on top of the Core module (like <code>ApplicationContext</code>).
+                  </div>
+                </li>
+                <li>
+                  <div class="bullet-marker">&bull;</div>
+                  <div class="bullet-content">
+                    <strong>SpEL (Spring Expression Language):</strong> Allows querying and manipulating objects at runtime using expressions like <code>#{}</code>.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Callout: Key Point -->
+            <div class="callout callout-keypoint">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4A1;</span> KEY POINT TO REMEMBER
+              </div>
+              <p>
+                Everything in Spring revolves around the <strong>Core Container</strong>. It is responsible for creating objects (called Beans) and injecting their dependencies &mdash; this is the base on which MVC, AOP, and Data Access modules work.
+              </p>
+            </div>
+
+            <!-- Callout: Exam Tip -->
+            <div class="callout callout-exam">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F393;</span> EXAM TIP
+              </div>
+              <p>
+                If asked to <em>"draw Spring architecture,"</em> always draw it as layers with the <strong>Core Container at the bottom</strong>, since every other module depends on it.
+              </p>
+            </div>
+
+          </div>
+        </article>
+      </section>
+
+      <!-- CHAPTER 2 SECTION -->
+      <section class="chapter-section" id="chapter-2">
+        <div class="section-title-badge">
+          <span class="badge-tag">CHAPTER 2</span>
+          <h2>Dependency Injection (DI) and Inversion of Control (IoC)</h2>
+        </div>
+
+        <!-- Point 2.1 -->
+        <article class="explanation-card" id="point-2-1">
+          <div class="card-header">
+            <div class="card-point-pill">Point 2.1</div>
+            <h3>What is Inversion of Control (IoC)?</h3>
+          </div>
+          <div class="card-body">
+            <div class="callout callout-definition">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4D6;</span> DEFINITION
+              </div>
+              <p>
+                <strong>Inversion of Control</strong> is a design principle in which the control of creating and managing objects is transferred from the programmer to a container/framework (in our case, the Spring Container). Since the controlling of Java objects and their life cycle is no longer done by the developer, it is called <em>"Inversion"</em> of Control.
+              </p>
+            </div>
+
+            <div class="comparison-grid">
+              <div class="comparison-card traditional">
+                <div class="comp-title">&#x274C; In Traditional Programming</div>
+                <code>Engine engine = new Engine();</code>
+                <p>The class itself creates its dependency using <code>new</code>. Result: tightly coupled code.</p>
+              </div>
+              <div class="comparison-card ioc">
+                <div class="comp-title">&#x2714; With IoC (Spring)</div>
+                <code>Spring Container injects Engine</code>
+                <p>The Spring Container creates the Engine object and gives (injects) it to the class that needs it.</p>
+              </div>
+            </div>
+
+            <p class="note-paragraph">
+              <strong>Main responsibilities of the Spring IoC container:</strong> creating objects, managing them, wiring dependencies together, and making the application easily configurable.
+            </p>
+          </div>
+        </article>
+
+        <!-- Point 2.2 -->
+        <article class="explanation-card" id="point-2-2">
+          <div class="card-header">
+            <div class="card-point-pill">Point 2.2</div>
+            <h3>What is Dependency Injection (DI)?</h3>
+          </div>
+          <div class="card-body">
+            <div class="callout callout-definition">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4D6;</span> DEFINITION
+              </div>
+              <p>
+                <strong>Dependency Injection</strong> is the actual technique used to implement IoC. It means supplying (injecting) the required objects (dependencies) of a class from outside, instead of the class creating them itself.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Point 2.3 -->
+        <article class="explanation-card" id="point-2-3">
+          <div class="card-header">
+            <div class="card-point-pill">Point 2.3</div>
+            <h3>Block Diagram &mdash; Without DI vs With DI</h3>
+          </div>
+          <div class="card-body">
+            <div class="diagram-container">
+              <div class="diagram-title">BLOCK DIAGRAM &mdash; WITHOUT DI VS WITH DI</div>
+              
+              <div class="di-diagram-wrapper">
+                <!-- Without DI -->
+                <div class="di-col without-di">
+                  <div class="di-col-title tight">WITHOUT DI (Tight Coupling)</div>
+                  <div class="flow-box box-car">Car class</div>
+                  <div class="flow-arrow">&darr; creates using "new"</div>
+                  <div class="flow-box box-engine">Engine object</div>
+                </div>
+
+                <div class="di-divider">VS</div>
+
+                <!-- With DI -->
+                <div class="di-col with-di">
+                  <div class="di-col-title loose">WITH DI (Loose Coupling)</div>
+                  <div class="flow-box box-spring">Spring Container</div>
+                  <div class="flow-arrow">&darr; injects Engine into Car</div>
+                  <div class="flow-box box-car-loose">Car class &larr; receives Engine</div>
+                </div>
+              </div>
+
+              <div class="arch-caption">
+                In DI, the Car class <strong>does not create the Engine</strong> &mdash; the Container hands it over, so Car and Engine remain <strong>loosely coupled</strong>.
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Point 2.4 -->
+        <article class="explanation-card" id="point-2-4">
+          <div class="card-header">
+            <div class="card-point-pill">Point 2.4</div>
+            <h3>Types of Dependency Injection</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%;">Type</th>
+                    <th style="width: 45%;">How it works</th>
+                    <th>When to use</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>1. Constructor Injection</strong></td>
+                    <td>Spring passes the dependency through the class constructor when the object is created.</td>
+                    <td><span class="pill-badge pill-green">Best for mandatory / required dependencies.</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>2. Setter Injection</strong></td>
+                    <td>Spring calls the setter method of the class to supply the dependency after the object is created.</td>
+                    <td><span class="pill-badge pill-blue">Best for optional dependencies, or ones that may change after the object is built.</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <!-- Point 2.5 -->
+        <article class="explanation-card" id="point-2-5">
+          <div class="card-header">
+            <div class="card-point-pill">Point 2.5</div>
+            <h3>Autowiring &mdash; A Spring Feature</h3>
+          </div>
+          <div class="card-body">
+            <div class="callout callout-feature">
+              <div class="callout-label">
+                <span class="callout-icon">&#x2699;</span> AUTOWIRING &mdash; A SPRING FEATURE
+              </div>
+              <p>
+                Autowiring is <strong>not counted as a separate "type" of DI</strong> in exam answers. It is a Spring feature that automatically performs Constructor or Setter Injection for you, by matching dependencies by type or name, so you don't have to wire every bean manually in XML.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Point 2.6 -->
+        <article class="explanation-card" id="point-2-6">
+          <div class="card-header">
+            <div class="card-point-pill">Point 2.6</div>
+            <h3>Code Programs: Setter &amp; Constructor Injection</h3>
+          </div>
+          <div class="card-body">
+            
+            <!-- Setter Injection Code Tabs -->
+            <div class="code-section-group">
+              <h4 class="sub-heading">&#x25B6; Example: Setter Injection</h4>
+              
+              <div class="code-block-wrapper">
+                <div class="code-header">
+                  <span class="code-title"><span class="lang-tag">Java</span> Engine.java &amp; Car.java</span>
+                  <button class="copy-btn" data-target="code-setter-java">Copy Code</button>
+                </div>
+                <pre><code id="code-setter-java">public class Engine {
+    public void start() {
+        System.out.println("Engine started...");
+    }
+}
+
+public class Car {
+    private Engine engine;
+
+    // Setter method used by Spring to inject dependency
+    public void setEngine(Engine engine) {
+        this.engine = engine;
+    }
+
+    public void drive() {
+        engine.start();
+        System.out.println("Car is running");
+    }
+}</code></pre>
+              </div>
+
+              <div class="code-block-wrapper">
+                <div class="code-header">
+                  <span class="code-title"><span class="lang-tag">XML</span> applicationContext.xml (Setter Injection Configuration)</span>
+                  <button class="copy-btn" data-target="code-setter-xml">Copy XML</button>
+                </div>
+                <pre><code id="code-setter-xml">&lt;beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"&gt;
+
+    &lt;bean id="engine" class="Engine"/&gt;
+
+    &lt;bean id="car" class="Car"&gt;
+        &lt;property name="engine" ref="engine"/&gt;
+    &lt;/bean&gt;
+
+&lt;/beans&gt;</code></pre>
+              </div>
+            </div>
+
+            <!-- Constructor Injection Code Tabs -->
+            <div class="code-section-group">
+              <h4 class="sub-heading">&#x25B6; Example: Constructor Injection</h4>
+              
+              <div class="code-block-wrapper">
+                <div class="code-header">
+                  <span class="code-title"><span class="lang-tag">Java</span> Car.java (Constructor Injection)</span>
+                  <button class="copy-btn" data-target="code-const-java">Copy Code</button>
+                </div>
+                <pre><code id="code-const-java">public class Car {
+    private final Engine engine;
+
+    // Constructor used by Spring to inject dependency
+    public Car(Engine engine) {
+        this.engine = engine;
+    }
+
+    public void drive() {
+        engine.start();
+        System.out.println("Car is running");
+    }
+}</code></pre>
+              </div>
+
+              <div class="code-block-wrapper">
+                <div class="code-header">
+                  <span class="code-title"><span class="lang-tag">XML</span> applicationContext.xml (Constructor Injection Configuration)</span>
+                  <button class="copy-btn" data-target="code-const-xml">Copy XML</button>
+                </div>
+                <pre><code id="code-const-xml">&lt;bean id="engine" class="Engine"/&gt;
+
+&lt;bean id="car" class="Car"&gt;
+    &lt;constructor-arg ref="engine"/&gt;
+&lt;/bean&gt;</code></pre>
+              </div>
+
+              <div class="code-block-wrapper">
+                <div class="code-header">
+                  <span class="code-title"><span class="lang-tag">Java</span> Main.java (Testing the Application)</span>
+                  <button class="copy-btn" data-target="code-main-java">Copy Code</button>
+                </div>
+                <pre><code id="code-main-java">import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+    public static void main(String[] args) {
+        ApplicationContext context =
+            new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        Car car = (Car) context.getBean("car");
+        car.drive();
+    }
+}
+
+/* OUTPUT:
+Engine started...
+Car is running
+*/</code></pre>
+              </div>
+            </div>
+
+            <!-- Callout: Key Point -->
+            <div class="callout callout-keypoint">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4A1;</span> KEY POINT TO REMEMBER
+              </div>
+              <p>
+                <strong>IoC is a design principle</strong>, while <strong>Dependency Injection (DI) is a technique</strong> used to implement IoC. Whenever the Spring Container supplies a dependency to a class, that is DI in action, and DI is simply how Spring applies the broader IoC principle in practice.
+              </p>
+            </div>
+
+          </div>
+        </article>
+      </section>
+
+      <!-- CHAPTER 3 SECTION -->
+      <section class="chapter-section" id="chapter-3">
+        <div class="section-title-badge">
+          <span class="badge-tag">CHAPTER 3</span>
+          <h2>Spring Container and Bean Life Cycle</h2>
+        </div>
+
+        <!-- Point 3.1 -->
+        <article class="explanation-card" id="point-3-1">
+          <div class="card-header">
+            <div class="card-point-pill">Point 3.1</div>
+            <h3>What is the Spring Container?</h3>
+          </div>
+          <div class="card-body">
+            <div class="callout callout-definition">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4D6;</span> DEFINITION
+              </div>
+              <p>
+                The <strong>Spring Container</strong> is the core part of the framework responsible for creating objects (beans), configuring them, wiring their dependencies together, and managing their complete life cycle from creation to destruction. It reads the required configuration information from an XML file, Java annotations, or Java-based configuration classes.
+              </p>
+            </div>
+            <div class="sub-topic-box">
+              <p><strong>Bean Definition:</strong> Any object which is created, configured, and managed by the Spring Container is called a <strong>Bean</strong>.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Point 3.2 -->
+        <article class="explanation-card" id="point-3-2">
+          <div class="card-header">
+            <div class="card-point-pill">Point 3.2</div>
+            <h3>Types of Spring Container</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%;">Container</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>BeanFactory</strong></td>
+                    <td>The most basic container. Provides basic DI support. Loads beans <strong>lazily</strong> (only when requested).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>ApplicationContext</strong></td>
+                    <td>An advanced container built on top of <code>BeanFactory</code>. Supports AOP, event propagation, internationalization, and loads beans <strong>eagerly</strong> (at startup). This is the most commonly used container in real projects.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Block Diagram: How Container Works -->
+            <div class="diagram-container">
+              <div class="diagram-title">BLOCK DIAGRAM &mdash; HOW THE SPRING CONTAINER WORKS</div>
+              
+              <div class="horizontal-flow">
+                <div class="flow-pill pill-input">Configuration Metadata<br><small>(XML file / Annotations)</small></div>
+                <div class="flow-arrow-h">&rarr;</div>
+                <div class="flow-pill pill-engine">Spring Container<br><small>(BeanFactory / ApplicationContext)</small></div>
+                <div class="flow-arrow-h">&rarr;</div>
+                <div class="flow-pill pill-output">Ready-to-use Beans<br><small>(Fully configured Objects)</small></div>
+              </div>
+
+              <div class="arch-caption">
+                The container reads configuration, creates beans, injects their dependencies, and hands over fully-ready objects to the application.
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Point 3.3 -->
+        <article class="explanation-card" id="point-3-3">
+          <div class="card-header">
+            <div class="card-point-pill">Point 3.3</div>
+            <h3>Spring Bean Life Cycle (9-Step Complete Diagram)</h3>
+          </div>
+          <div class="card-body">
+            <p class="context-lead">
+              Every bean managed by Spring goes through a well-defined sequence of steps from the moment it is created to the moment it is destroyed.
+            </p>
+
+            <div class="diagram-container">
+              <div class="diagram-title">BLOCK DIAGRAM &mdash; BEAN LIFE CYCLE STEPS</div>
+              
+              <div class="lifecycle-grid">
+                <div class="step-card essential" data-step="1">
+                  <span class="step-badge">1</span>
+                  <div class="step-title">Instantiate the Bean</div>
+                  <div class="step-desc">Constructor is called</div>
+                </div>
+                <div class="step-connector">&rarr;</div>
+
+                <div class="step-card essential" data-step="2">
+                  <span class="step-badge">2</span>
+                  <div class="step-title">Populate Properties (DI)</div>
+                  <div class="step-desc">Dependencies are injected</div>
+                </div>
+                <div class="step-connector">&rarr;</div>
+
+                <div class="step-card optional" data-step="3">
+                  <span class="step-badge optional-badge">3</span>
+                  <div class="step-title">setBeanName()</div>
+                  <div class="step-desc">(BeanNameAware)</div>
+                </div>
+                <div class="step-connector">&rarr;</div>
+
+                <div class="step-card optional" data-step="4">
+                  <span class="step-badge optional-badge">4</span>
+                  <div class="step-title">setBeanFactory()</div>
+                  <div class="step-desc">(BeanFactoryAware)</div>
+                </div>
+                <div class="step-connector">&rarr;</div>
+
+                <div class="step-card optional" data-step="5">
+                  <span class="step-badge optional-badge">5</span>
+                  <div class="step-title">Pre-Initialization</div>
+                  <div class="step-desc">(BeanPostProcessor)</div>
+                </div>
+                <div class="step-connector">&rarr;</div>
+
+                <div class="step-card essential" data-step="6">
+                  <span class="step-badge">6</span>
+                  <div class="step-title">afterPropertiesSet() / init-method</div>
+                  <div class="step-desc">Bean is Initialized</div>
+                </div>
+                <div class="step-connector">&rarr;</div>
+
+                <div class="step-card optional" data-step="7">
+                  <span class="step-badge optional-badge">7</span>
+                  <div class="step-title">Post-Initialization</div>
+                  <div class="step-desc">(BeanPostProcessor)</div>
+                </div>
+                <div class="step-connector">&rarr;</div>
+
+                <div class="step-card ready" data-step="8">
+                  <span class="step-badge ready-badge">8</span>
+                  <div class="step-title">Bean is Ready to Use</div>
+                  <div class="step-desc">Servicing application requests</div>
+                </div>
+                <div class="step-connector">&rarr;</div>
+
+                <div class="step-card destroy" data-step="9">
+                  <span class="step-badge destroy-badge">9</span>
+                  <div class="step-title">Container Shutdown</div>
+                  <div class="step-desc">&rarr; destroy() / destroy-method</div>
+                </div>
+              </div>
+
+              <div class="arch-caption">
+                <em>Steps 3, 4, 5, and 7 are optional</em> &mdash; they only run if the bean implements the related interface. <strong>Steps 1, 2, 6, 8, 9</strong> are the ones asked most in exams.
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Point 3.4 -->
+        <article class="explanation-card" id="point-3-4">
+          <div class="card-header">
+            <div class="card-point-pill">Point 3.4</div>
+            <h3>Simplified Life Cycle (Exam Version)</h3>
+          </div>
+          <div class="card-body">
+            
+            <div class="diagram-container">
+              <div class="diagram-title">SIMPLIFIED LIFE CYCLE (EXAM VERSION)</div>
+              
+              <div class="simplified-flow">
+                <div class="simp-box">Instantiation</div>
+                <div class="simp-arrow">&rarr;</div>
+                <div class="simp-box">Dependency Injection</div>
+                <div class="simp-arrow">&rarr;</div>
+                <div class="simp-box init-box">Initialization<br><small>(init-method)</small></div>
+                <div class="simp-arrow">&rarr;</div>
+                <div class="simp-box use-box">Bean in Use</div>
+                <div class="simp-arrow">&rarr;</div>
+                <div class="simp-box destroy-box">Destruction<br><small>(destroy-method)</small></div>
+              </div>
+            </div>
+
+            <!-- Callout: Exam Tip -->
+            <div class="callout callout-exam">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F393;</span> EXAM TIP
+              </div>
+              <p>
+                Remember the short form: <strong>Instantiate &rarr; Populate &rarr; Initialize &rarr; Use &rarr; Destroy</strong>. This single line answers most theory questions on Bean Life Cycle.
+              </p>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Point 3.5 -->
+        <article class="explanation-card" id="point-3-5">
+          <div class="card-header">
+            <div class="card-point-pill">Point 3.5</div>
+            <h3>Example: Custom init() and destroy() Methods</h3>
+          </div>
+          <div class="card-body">
+            
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> HelloBean.java</span>
+                <button class="copy-btn" data-target="code-hellobean">Copy Code</button>
+              </div>
+              <pre><code id="code-hellobean">public class HelloBean {
+    public HelloBean() {
+        System.out.println("1. Bean Instantiated (Constructor called)");
+    }
+
+    public void init() {
+        System.out.println("2. init-method called: Bean is Initialized");
+    }
+
+    public void sayHello() {
+        System.out.println("3. Hello from Spring Bean!");
+    }
+
+    public void destroy() {
+        System.out.println("4. destroy-method called: Bean is Destroyed");
+    }
+}</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">XML</span> applicationContext.xml</span>
+                <button class="copy-btn" data-target="code-bean-xml">Copy XML</button>
+              </div>
+              <pre><code id="code-bean-xml">&lt;bean id="helloBean" class="HelloBean"
+      init-method="init" destroy-method="destroy"/&gt;</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> Main.java</span>
+                <button class="copy-btn" data-target="code-bean-main">Copy Code</button>
+              </div>
+              <pre><code id="code-bean-main">ClassPathXmlApplicationContext context =
+    new ClassPathXmlApplicationContext("applicationContext.xml");
+
+HelloBean bean = (HelloBean) context.getBean("helloBean");
+bean.sayHello();
+
+context.close(); // triggers destroy-method
+
+/* OUTPUT:
+1. Bean Instantiated (Constructor called)
+2. init-method called: Bean is Initialized
+3. Hello from Spring Bean!
+4. destroy-method called: Bean is Destroyed
+*/</code></pre>
+            </div>
+
+          </div>
+        </article>
+      </section>
+
+      <!-- CHAPTER 4 SECTION -->
+      <section class="chapter-section" id="chapter-4">
+        <div class="section-title-badge">
+          <span class="badge-tag">CHAPTER 4</span>
+          <h2>XML-Based and Annotation-Based Configuration</h2>
+        </div>
+
+        <!-- Point 4.1 -->
+        <article class="explanation-card" id="point-4-1">
+          <div class="card-header">
+            <div class="card-point-pill">Point 4.1</div>
+            <h3>XML-Based Configuration</h3>
+          </div>
+          <div class="card-body">
+            <div class="callout callout-definition">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4D6;</span> DEFINITION
+              </div>
+              <p>
+                In this approach, beans and their dependencies are declared inside an <strong>XML file</strong> (like <code>applicationContext.xml</code>). The Spring Container reads this file to know which objects to create and how to wire them.
+              </p>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">XML</span> Example: student-context.xml</span>
+                <button class="copy-btn" data-target="code-student-xml">Copy XML</button>
+              </div>
+              <pre><code id="code-student-xml">&lt;beans xmlns="http://www.springframework.org/schema/beans" ...&gt;
+    &lt;bean id="student" class="Student"&gt;
+        &lt;property name="name" value="Rahul"/&gt;
+        &lt;property name="age" value="21"/&gt;
+    &lt;/bean&gt;
+&lt;/beans&gt;</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> Student.java</span>
+                <button class="copy-btn" data-target="code-student-java">Copy Code</button>
+              </div>
+              <pre><code id="code-student-java">public class Student {
+    private String name;
+    private int age;
+
+    public void setName(String name) { this.name = name; }
+    public void setAge(int age) { this.age = age; }
+
+    public void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}</code></pre>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Point 4.2 -->
+        <article class="explanation-card" id="point-4-2">
+          <div class="card-header">
+            <div class="card-point-pill">Point 4.2</div>
+            <h3>Annotation-Based Configuration</h3>
+          </div>
+          <div class="card-body">
+            <div class="callout callout-definition">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4D6;</span> DEFINITION
+              </div>
+              <p>
+                Instead of writing XML, dependencies are configured directly in the Java class using special annotations. Spring scans the classes (<strong>Component Scanning</strong>) and automatically creates and wires the beans.
+              </p>
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th style="width: 28%;">Annotation</th>
+                    <th>Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>@Component</code></td>
+                    <td>Marks a class as a generic Spring-managed bean.</td>
+                  </tr>
+                  <tr>
+                    <td><code>@Autowired</code></td>
+                    <td>Tells Spring to automatically inject the required dependency.</td>
+                  </tr>
+                  <tr>
+                    <td><code>@Configuration</code></td>
+                    <td>Marks a class as a source of bean definitions (replaces XML file).</td>
+                  </tr>
+                  <tr>
+                    <td><code>@Bean</code></td>
+                    <td>Used inside a <code>@Configuration</code> class to manually declare a bean.</td>
+                  </tr>
+                  <tr>
+                    <td><code>@ComponentScan</code></td>
+                    <td>Tells Spring which package to scan for annotated classes.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Point 4.3 -->
+        <article class="explanation-card" id="point-4-3">
+          <div class="card-header">
+            <div class="card-point-pill">Point 4.3</div>
+            <h3>Annotation Code Implementation</h3>
+          </div>
+          <div class="card-body">
+            
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> Engine.java &amp; Car.java (Annotation Based)</span>
+                <button class="copy-btn" data-target="code-annot-classes">Copy Code</button>
+              </div>
+              <pre><code id="code-annot-classes">import org.springframework.stereotype.Component;
+
+@Component
+public class Engine {
+    public void start() {
+        System.out.println("Engine started using annotation config");
+    }
+}
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Car {
+    @Autowired
+    private Engine engine;
+
+    public void drive() {
+        engine.start();
+        System.out.println("Car is running (Annotation Config)");
+    }
+}</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> AppConfig.java (replaces XML file)</span>
+                <button class="copy-btn" data-target="code-appconfig">Copy Code</button>
+              </div>
+              <pre><code id="code-appconfig">import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = "com.example")
+public class AppConfig {
+}</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> Main.java</span>
+                <button class="copy-btn" data-target="code-annot-main">Copy Code</button>
+              </div>
+              <pre><code id="code-annot-main">import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Main {
+    public static void main(String[] args) {
+        AnnotationConfigApplicationContext context =
+            new AnnotationConfigApplicationContext(AppConfig.class);
+
+        Car car = context.getBean(Car.class);
+        car.drive();
+    }
+}</code></pre>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Point 4.4 -->
+        <article class="explanation-card" id="point-4-4">
+          <div class="card-header">
+            <div class="card-point-pill">Point 4.4</div>
+            <h3>XML vs Annotation &mdash; Quick Comparison</h3>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th style="width: 22%;">Basis</th>
+                    <th style="width: 39%;">XML Configuration</th>
+                    <th style="width: 39%;">Annotation Configuration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Location of config</strong></td>
+                    <td>Separate XML file</td>
+                    <td>Inside the Java class itself</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Readability</strong></td>
+                    <td>Configuration and code are separated, can get long</td>
+                    <td>Compact, config sits close to code</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Flexibility</strong></td>
+                    <td>Can change beans without recompiling code</td>
+                    <td>Requires recompilation to change</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Best suited for</strong></td>
+                    <td>Large legacy projects, external library beans</td>
+                    <td>Modern applications, faster development</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- CHAPTER 5 SECTION -->
+      <section class="chapter-section" id="chapter-5">
+        <div class="section-title-badge">
+          <span class="badge-tag">CHAPTER 5</span>
+          <h2>Spring MVC Architecture and DispatcherServlet</h2>
+        </div>
+
+        <!-- Point 5.1 -->
+        <article class="explanation-card" id="point-5-1">
+          <div class="card-header">
+            <div class="card-point-pill">Point 5.1</div>
+            <h3>What is Spring MVC?</h3>
+          </div>
+          <div class="card-body">
+            <div class="callout callout-definition">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4D6;</span> DEFINITION
+              </div>
+              <p>
+                <strong>Spring MVC</strong> is a module of Spring used to build web applications following the Model-View-Controller design pattern, which separates an application into three parts: <strong>Model</strong> (data), <strong>View</strong> (UI), and <strong>Controller</strong> (request-handling logic).
+              </p>
+            </div>
+
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%;">Component</th>
+                    <th>Role</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="pill-badge pill-purple">Model</span></td>
+                    <td>Holds application data (usually POJOs / data from database).</td>
+                  </tr>
+                  <tr>
+                    <td><span class="pill-badge pill-green">View</span></td>
+                    <td>Displays data to the user (JSP, Thymeleaf, HTML page).</td>
+                  </tr>
+                  <tr>
+                    <td><span class="pill-badge pill-blue">Controller</span></td>
+                    <td>Handles client requests, processes them, and returns the appropriate response/view.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+
+        <!-- Point 5.2 -->
+        <article class="explanation-card" id="point-5-2">
+          <div class="card-header">
+            <div class="card-point-pill">Point 5.2</div>
+            <h3>DispatcherServlet &mdash; The Front Controller</h3>
+          </div>
+          <div class="card-body">
+            <div class="callout callout-definition">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4D6;</span> DEFINITION
+              </div>
+              <p>
+                <strong>DispatcherServlet</strong> is the heart of Spring MVC. It acts as the <strong>Front Controller</strong> &mdash; every single HTTP request first arrives here, and it decides which controller should handle it, then sends the final response back to the browser.
+              </p>
+            </div>
+
+            <div class="callout callout-keypoint">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4A1;</span> KEY POINT TO REMEMBER
+              </div>
+              <p>
+                DispatcherServlet follows the <strong>Front Controller design pattern</strong> &mdash; a single entry point for all requests, which then routes them appropriately. This centralises request handling and makes the application easier to manage.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Point 5.3 -->
+        <article class="explanation-card" id="point-5-3">
+          <div class="card-header">
+            <div class="card-point-pill">Point 5.3</div>
+            <h3>Spring MVC Request Flow (Interactive 8 Steps)</h3>
+          </div>
+          <div class="card-body">
+            
+            <!-- Interactive Simulator Controls -->
+            <div class="mvc-simulator-controls">
+              <div class="sim-label">Interactive Request Flow Simulator:</div>
+              <div class="sim-btn-group">
+                <button id="sim-prev" class="sim-btn">&larr; Previous</button>
+                <button id="sim-next" class="sim-btn primary">Next Step &rarr;</button>
+                <button id="sim-reset" class="sim-btn secondary">Reset</button>
+              </div>
+              <div class="sim-status" id="sim-step-indicator">Step 1 of 8 Active</div>
+            </div>
+
+            <!-- Block Diagram Flow -->
+            <div class="diagram-container">
+              <div class="diagram-title">BLOCK DIAGRAM &mdash; SPRING MVC REQUEST FLOW</div>
+              
+              <div class="mvc-flow-list">
+                <div class="mvc-step-node" data-mvc-step="1">
+                  <div class="mvc-step-num">1</div>
+                  <div class="mvc-step-content">
+                    <span class="mvc-node-title">Client / Browser sends HTTP Request</span>
+                    <span class="mvc-node-desc">User clicks a link or submits a form</span>
+                  </div>
+                </div>
+                <div class="mvc-arrow">&darr;</div>
+
+                <div class="mvc-step-node" data-mvc-step="2">
+                  <div class="mvc-step-num">2</div>
+                  <div class="mvc-step-content">
+                    <span class="mvc-node-title">DispatcherServlet (Front Controller)</span>
+                    <span class="mvc-node-desc">Receives the request first; acts as central coordinator</span>
+                  </div>
+                </div>
+                <div class="mvc-arrow">&darr;</div>
+
+                <div class="mvc-step-node" data-mvc-step="3">
+                  <div class="mvc-step-num">3</div>
+                  <div class="mvc-step-content">
+                    <span class="mvc-node-title">Handler Mapping (finds correct Controller)</span>
+                    <span class="mvc-node-desc">Checks which Controller method matches the requested URL</span>
+                  </div>
+                </div>
+                <div class="mvc-arrow">&darr;</div>
+
+                <div class="mvc-step-node" data-mvc-step="4">
+                  <div class="mvc-step-num">4</div>
+                  <div class="mvc-step-content">
+                    <span class="mvc-node-title">Controller (executes business logic)</span>
+                    <span class="mvc-node-desc">Executes logic (e.g. database fetch) &amp; returns Model + View name</span>
+                  </div>
+                </div>
+                <div class="mvc-arrow">&darr;</div>
+
+                <div class="mvc-step-node" data-mvc-step="5">
+                  <div class="mvc-step-num">5</div>
+                  <div class="mvc-step-content">
+                    <span class="mvc-node-title">Model + View Name returned to DispatcherServlet</span>
+                    <span class="mvc-node-desc">Controller hands result back to DispatcherServlet</span>
+                  </div>
+                </div>
+                <div class="mvc-arrow">&darr;</div>
+
+                <div class="mvc-step-node" data-mvc-step="6">
+                  <div class="mvc-step-num">6</div>
+                  <div class="mvc-step-content">
+                    <span class="mvc-node-title">View Resolver (locates actual JSP/HTML page)</span>
+                    <span class="mvc-node-desc">Converts logical view name (e.g. "home") to file path (/WEB-INF/views/home.jsp)</span>
+                  </div>
+                </div>
+                <div class="mvc-arrow">&darr;</div>
+
+                <div class="mvc-step-node" data-mvc-step="7">
+                  <div class="mvc-step-num">7</div>
+                  <div class="mvc-step-content">
+                    <span class="mvc-node-title">View (JSP) renders data</span>
+                    <span class="mvc-node-desc">View is populated with Model data</span>
+                  </div>
+                </div>
+                <div class="mvc-arrow">&darr;</div>
+
+                <div class="mvc-step-node" data-mvc-step="8">
+                  <div class="mvc-step-num">8</div>
+                  <div class="mvc-step-content">
+                    <span class="mvc-node-title">HTTP Response sent back to Client</span>
+                    <span class="mvc-node-desc">DispatcherServlet sends the final HTML response back to browser</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step-by-Step Explanation in Simple Words -->
+            <div class="sub-topic-box">
+              <h4 class="sub-heading">Step-by-Step Explanation (Simple Words)</h4>
+              <ol class="ordered-step-list">
+                <li><strong>The user clicks a link / submits a form</strong> &rarr; a request goes to the server.</li>
+                <li><strong>DispatcherServlet receives the request first</strong> &mdash; it does not process business logic itself, it just delegates.</li>
+                <li><strong>The Handler Mapping checks</strong> which Controller method matches the requested URL.</li>
+                <li><strong>The matched Controller executes the logic</strong> (e.g., fetching data from a database) and returns a Model (data) and a View name.</li>
+                <li><strong>The View Resolver converts</strong> the logical view name (e.g., <code>"home"</code>) into the actual file path (e.g., <code>/WEB-INF/views/home.jsp</code>).</li>
+                <li><strong>The View is rendered</strong> with the Model data and sent back to DispatcherServlet.</li>
+                <li><strong>DispatcherServlet sends the final HTML response</strong> back to the browser.</li>
+              </ol>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Point 5.4 -->
+        <article class="explanation-card" id="point-5-4">
+          <div class="card-header">
+            <div class="card-point-pill">Point 5.4</div>
+            <h3>Example: Simple Spring MVC Controller</h3>
+          </div>
+          <div class="card-body">
+            
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> HomeController.java</span>
+                <button class="copy-btn" data-target="code-home-ctrl">Copy Code</button>
+              </div>
+              <pre><code id="code-home-ctrl">import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+
+    @GetMapping("/welcome")
+    public String showWelcomePage(Model model) {
+        model.addAttribute("message", "Welcome to Spring MVC!");
+        return "welcome"; // logical view name -> welcome.jsp
+    }
+}</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">XML</span> web.xml (registers DispatcherServlet)</span>
+                <button class="copy-btn" data-target="code-web-xml">Copy XML</button>
+              </div>
+              <pre><code id="code-web-xml">&lt;servlet&gt;
+    &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;
+        org.springframework.web.servlet.DispatcherServlet
+    &lt;/servlet-class&gt;
+&lt;/servlet&gt;
+
+&lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">JSP</span> welcome.jsp (View)</span>
+                <button class="copy-btn" data-target="code-jsp-view">Copy JSP</button>
+              </div>
+              <pre><code id="code-jsp-view">&lt;html&gt;
+&lt;body&gt;
+    &lt;h2&gt;${message}&lt;/h2&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+
+          </div>
+        </article>
+      </section>
+
+      <!-- CHAPTER 6 SECTION -->
+      <section class="chapter-section" id="chapter-6">
+        <div class="section-title-badge">
+          <span class="badge-tag">CHAPTER 6</span>
+          <h2>Database Connectivity &mdash; Spring JDBC &amp; Spring + Hibernate</h2>
+        </div>
+
+        <!-- Point 6.1 -->
+        <article class="explanation-card" id="point-6-1">
+          <div class="card-header">
+            <div class="card-point-pill">Point 6.1</div>
+            <h3>Why Spring JDBC?</h3>
+          </div>
+          <div class="card-body">
+            <div class="callout callout-definition">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4D6;</span> DEFINITION
+              </div>
+              <p>
+                <strong>Spring JDBC</strong> is a module that simplifies working with plain JDBC by removing repetitive boilerplate code &mdash; like opening/closing connections, handling exceptions, and closing statements &mdash; using a helper class called <strong>JdbcTemplate</strong>.
+              </p>
+            </div>
+
+            <!-- Block Diagram: Spring JDBC Flow -->
+            <div class="diagram-container">
+              <div class="diagram-title">BLOCK DIAGRAM &mdash; SPRING JDBC FLOW</div>
+              
+              <div class="horizontal-flow">
+                <div class="flow-pill pill-app">Java Application</div>
+                <div class="flow-arrow-h">&rarr;</div>
+                <div class="flow-pill pill-jdbc">JdbcTemplate<br><small>(Spring JDBC)</small></div>
+                <div class="flow-arrow-h">&rarr;</div>
+                <div class="flow-pill pill-ds">DataSource<br><small>(Connection Pool)</small></div>
+                <div class="flow-arrow-h">&rarr;</div>
+                <div class="flow-pill pill-db">Database<br><small>(MySQL / Oracle etc.)</small></div>
+              </div>
+
+              <div class="arch-caption">
+                <code>JdbcTemplate</code> internally manages the connection, executes the SQL query, maps results, and closes resources automatically.
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Point 6.2 -->
+        <article class="explanation-card" id="point-6-2">
+          <div class="card-header">
+            <div class="card-point-pill">Point 6.2</div>
+            <h3>Example: Spring JDBC using JdbcTemplate</h3>
+          </div>
+          <div class="card-body">
+            
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> Student.java (Model)</span>
+                <button class="copy-btn" data-target="code-jdbc-model">Copy Code</button>
+              </div>
+              <pre><code id="code-jdbc-model">public class Student {
+    private int id;
+    private String name;
+    // getters and setters
+}</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> StudentDao.java</span>
+                <button class="copy-btn" data-target="code-jdbc-dao">Copy Code</button>
+              </div>
+              <pre><code id="code-jdbc-dao">import org.springframework.jdbc.core.JdbcTemplate;
+
+public class StudentDao {
+    private JdbcTemplate jdbcTemplate;
+
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
+
+    public void addStudent(int id, String name) {
+        String sql = "INSERT INTO student (id, name) VALUES (?, ?)";
+        jdbcTemplate.update(sql, id, name);
+        System.out.println("Student added successfully!");
+    }
+}</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">XML</span> applicationContext.xml</span>
+                <button class="copy-btn" data-target="code-jdbc-xml">Copy XML</button>
+              </div>
+              <pre><code id="code-jdbc-xml">&lt;bean id="dataSource"
+      class="org.springframework.jdbc.datasource.DriverManagerDataSource"&gt;
+    &lt;property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/&gt;
+    &lt;property name="url" value="jdbc:mysql://localhost:3306/college"/&gt;
+    &lt;property name="username" value="root"/&gt;
+    &lt;property name="password" value="password"/&gt;
+&lt;/bean&gt;
+
+&lt;bean id="jdbcTemplate"
+      class="org.springframework.jdbc.core.JdbcTemplate"&gt;
+    &lt;property name="dataSource" ref="dataSource"/&gt;
+&lt;/bean&gt;
+
+&lt;bean id="studentDao" class="StudentDao"&gt;
+    &lt;property name="jdbcTemplate" ref="jdbcTemplate"/&gt;
+&lt;/bean&gt;</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> Main.java</span>
+                <button class="copy-btn" data-target="code-jdbc-main">Copy Code</button>
+              </div>
+              <pre><code id="code-jdbc-main">ApplicationContext context =
+    new ClassPathXmlApplicationContext("applicationContext.xml");
+
+StudentDao dao = (StudentDao) context.getBean("studentDao");
+dao.addStudent(1, "Priya");</code></pre>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Point 6.3 -->
+        <article class="explanation-card" id="point-6-3">
+          <div class="card-header">
+            <div class="card-point-pill">Point 6.3</div>
+            <h3>Spring + Hibernate Integration</h3>
+          </div>
+          <div class="card-body">
+            <div class="callout callout-definition">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F4D6;</span> DEFINITION
+              </div>
+              <p>
+                <strong>Hibernate</strong> is an <strong>ORM (Object Relational Mapping)</strong> tool that maps Java objects directly to database tables, so we don't need to write raw SQL for basic operations. Spring integrates with Hibernate to manage the <code>SessionFactory</code> and transactions automatically.
+              </p>
+            </div>
+
+            <!-- Block Diagram: Spring + Hibernate Flow -->
+            <div class="diagram-container">
+              <div class="diagram-title">BLOCK DIAGRAM &mdash; SPRING + HIBERNATE FLOW</div>
+              
+              <div class="horizontal-flow">
+                <div class="flow-pill pill-app">Java Object<br><small>(POJO / Entity)</small></div>
+                <div class="flow-arrow-h">&rarr;</div>
+                <div class="flow-pill pill-orm">Hibernate<br><small>(ORM Layer)</small></div>
+                <div class="flow-arrow-h">&rarr;</div>
+                <div class="flow-pill pill-sf">SessionFactory<br><small>(managed by Spring)</small></div>
+                <div class="flow-arrow-h">&rarr;</div>
+                <div class="flow-pill pill-db">Database Table</div>
+              </div>
+
+              <div class="arch-caption">
+                Spring manages the <code>SessionFactory</code> and transactions, while Hibernate converts Java objects into SQL and back &mdash; this combination is called the <strong>ORM pattern</strong>.
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Point 6.4 -->
+        <article class="explanation-card" id="point-6-4">
+          <div class="card-header">
+            <div class="card-point-pill">Point 6.4</div>
+            <h3>Example: Spring + Hibernate Implementation</h3>
+          </div>
+          <div class="card-body">
+            
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> Student.java (Entity)</span>
+                <button class="copy-btn" data-target="code-hib-entity">Copy Code</button>
+              </div>
+              <pre><code id="code-hib-entity">import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Student {
+    @Id
+    private int id;
+    private String name;
+    // getters and setters
+}</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">Java</span> StudentDao.java (using HibernateTemplate / Session)</span>
+                <button class="copy-btn" data-target="code-hib-dao">Copy Code</button>
+              </div>
+              <pre><code id="code-hib-dao">import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+public class StudentDao {
+    private SessionFactory sessionFactory;
+
+    public void setSessionFactory(SessionFactory sf) {
+        this.sessionFactory = sf;
+    }
+
+    public void saveStudent(Student student) {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.save(student);
+        session.getTransaction().commit();
+        session.close();
+        System.out.println("Student saved using Hibernate!");
+    }
+}</code></pre>
+            </div>
+
+            <div class="code-block-wrapper">
+              <div class="code-header">
+                <span class="code-title"><span class="lang-tag">XML</span> applicationContext.xml (Hibernate SessionFactory bean)</span>
+                <button class="copy-btn" data-target="code-hib-xml">Copy XML</button>
+              </div>
+              <pre><code id="code-hib-xml">&lt;bean id="sessionFactory"
+      class="org.springframework.orm.hibernate5.LocalSessionFactoryBean"&gt;
+    &lt;property name="dataSource" ref="dataSource"/&gt;
+    &lt;property name="packagesToScan" value="com.example.model"/&gt;
+    &lt;property name="hibernateProperties"&gt;
+        &lt;props&gt;
+            &lt;prop key="hibernate.dialect"&gt;
+                org.hibernate.dialect.MySQL8Dialect
+            &lt;/prop&gt;
+            &lt;prop key="hibernate.hbm2ddl.auto"&gt;update&lt;/prop&gt;
+        &lt;/props&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;bean id="studentDao" class="StudentDao"&gt;
+    &lt;property name="sessionFactory" ref="sessionFactory"/&gt;
+&lt;/bean&gt;</code></pre>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Point 6.5 -->
+        <article class="explanation-card" id="point-6-5">
+          <div class="card-header">
+            <div class="card-point-pill">Point 6.5</div>
+            <h3>Spring JDBC vs Spring + Hibernate</h3>
+          </div>
+          <div class="card-body">
+            
+            <div class="table-responsive">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%;">Basis</th>
+                    <th style="width: 37%;">Spring JDBC</th>
+                    <th style="width: 38%;">Spring + Hibernate</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>SQL writing</strong></td>
+                    <td>Developer writes SQL manually</td>
+                    <td>Hibernate generates SQL automatically</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mapping</strong></td>
+                    <td>Manual mapping of ResultSet to objects</td>
+                    <td>Automatic Object-to-Table mapping (ORM)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Speed to develop</strong></td>
+                    <td>Good for simple, small queries</td>
+                    <td>Faster for complex applications with many tables</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Database independence</strong></td>
+                    <td>SQL may need changes if database changes</td>
+                    <td>Mostly database-independent (just change dialect)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Callout: Exam Tip -->
+            <div class="callout callout-exam">
+              <div class="callout-label">
+                <span class="callout-icon">&#x1F393;</span> EXAM TIP
+              </div>
+              <p>
+                If a question asks to <em>"differentiate JDBC and Hibernate,"</em> always mention: <strong>JDBC = manual SQL + manual mapping; Hibernate = automatic SQL generation + ORM mapping.</strong>
+              </p>
+            </div>
+
+          </div>
+        </article>
+      </section>
+
+      <!-- CHAPTER 7: QUICK REVISION SECTION -->
+      <section class="chapter-section" id="point-quick-revision">
+        <div class="section-title-badge revision-badge">
+          <span class="badge-tag">&#x2713; QUICK REVISION</span>
+          <h2>One-Line Answers to Remember</h2>
+        </div>
+
+        <article class="explanation-card revision-card">
+          <div class="card-header">
+            <div class="card-point-pill pill-rev">Core Takeaways</div>
+            <h3>Essential Exam One-Liners</h3>
+          </div>
+          <div class="card-body">
+            <div class="revision-grid">
+              
+              <div class="revision-item">
+                <div class="rev-term">Spring</div>
+                <div class="rev-def">= lightweight framework based on IoC and DI.</div>
+              </div>
+
+              <div class="revision-item">
+                <div class="rev-term">IoC</div>
+                <div class="rev-def">= concept of shifting object-creation control to the container.</div>
+              </div>
+
+              <div class="revision-item">
+                <div class="rev-term">DI</div>
+                <div class="rev-def">= technique to implement IoC (Constructor Injection / Setter Injection; Autowiring automates this).</div>
+              </div>
+
+              <div class="revision-item">
+                <div class="rev-term">Bean</div>
+                <div class="rev-def">= an object created and managed by the Spring Container.</div>
+              </div>
+
+              <div class="revision-item">
+                <div class="rev-term">ApplicationContext</div>
+                <div class="rev-def">= advanced Spring container with extra enterprise features.</div>
+              </div>
+
+              <div class="revision-item">
+                <div class="rev-term">DispatcherServlet</div>
+                <div class="rev-def">= Front Controller of Spring MVC; single entry point for requests.</div>
+              </div>
+
+              <div class="revision-item">
+                <div class="rev-term">JdbcTemplate</div>
+                <div class="rev-def">= Spring class that removes JDBC boilerplate code.</div>
+              </div>
+
+              <div class="revision-item">
+                <div class="rev-term">Hibernate</div>
+                <div class="rev-def">= ORM tool that maps Java objects to database tables automatically.</div>
+              </div>
+
+            </div>
+          </div>
+        </article>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="alert" aria-live="polite">Code copied to clipboard!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
