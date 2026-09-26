@@ -1,0 +1,20 @@
+{
+  "name": "Spring Framework Unit V Notes",
+  "short_name": "Spring Notes",
+  "description": "Interactive study notes, architecture diagrams, and programs for Spring Framework Unit V.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0b0f19",
+  "theme_color": "#0b0f19",
+  "categories": ["education", "books", "productivity"],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
